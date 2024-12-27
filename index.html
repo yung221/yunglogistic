@@ -1,0 +1,53 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula el precio de tu envío</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom styles for the datalist */
+        input::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <h1 class="text-center text-xl font-semibold text-blue-700 mb-6">Calcula el precio de tu envío</h1>
+        <div class="space-y-4">
+            <div class="relative">
+                <input list="productos" placeholder="Seleccionar producto" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100">
+                <datalist id="productos">
+                    <option value="Aseo personal">
+                    <option value="Artículos de Fiesta">
+                    <option value="Audífonos">
+                    <option value="Batería Automóvil">
+                    <option value="Bocinas Automóvil">
+                    <option value="Repuesto Automóvil">
+                    <option value="Respuesto interno de motor Automóvil (Consultar primero)">
+                    <option value="Baterías de litio NO recargables">
+                    <option value="Baterías de litio recargables">
+                    <option value="Bicicletas">
+                    <option value="Accesorios Bicicletas">
+                    <option value="Partes Bicicletas">
+                    <option value="Bocinas">
+                    <option value="Cámaras">
+                    <option value="Cámaras de seguridad (sin DVR)">
+                    <option value="Cámaras de seguridad (con DVR)">
+                    <option value="Cámaras de seguridad (Solo DVR)">
+                    <option value="Accesorios Cámaras">
+                    <option value="Repuestos Cámaras">
+                </datalist>
+                <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+            </div>
+            <div class="flex space-x-4">
+                <input type="text" placeholder="Peso Total" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100">
+                <input type="text" value="Libras" class="w-1/3 p-3 border border-gray-300 rounded-lg bg-gray-100 text-center" readonly>
+            </div>
+            <input type="text" placeholder="Valor Total del Producto en USD (Incl. envío e" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100">
+            <button class="w-full p-3 bg-blue-700 text-white rounded-lg font-semibold">CALCULAR</button>
+        </div>
+    </div>
+</body>
+</html>
